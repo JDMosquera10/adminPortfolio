@@ -154,7 +154,6 @@ namespace adminProfolio.Services
             user.VerificationCodeExpires = DateTime.UtcNow.AddMinutes(2);
             user.token = accessToken;
             user.refresh_token = refreshToken;
-            user.IsVerified = false;
 
             var filter = Builders<Usuario>.Filter.Eq(u => u.Id, user.Id);
             await _usuarios.ReplaceOneAsync(filter, user);

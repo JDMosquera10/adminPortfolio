@@ -27,10 +27,7 @@ builder.Services.AddScoped(sp =>
     return client.GetDatabase(settings.DatabaseName);
 });
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5000);
-});
+
 
 builder.Services.AddScoped<UsuarioService>();
 builder.Services.AddScoped<EmailService>();
