@@ -123,6 +123,13 @@ namespace adminProfolio.Services
 
             usuario.password = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
 
+            usuario.password = BCrypt.Net.BCrypt.HashPassword(usuario.password);
+            var codigoVerificacion = new Random().Next(100000, 999999).ToString();
+            usuario.VerificationCode = codigoVerificacion;
+            usuario.VerificationCodeExpires = DateTime.UtcNow.AddMinutes(5);
+
+            await _emailService.EnviarCodigoVerificacion(usuario.email, usuario.fullname, codigoVerificacion);
+
             await _usuarios.ReplaceOneAsync(u => u.Id == id, usuario);
         }
 

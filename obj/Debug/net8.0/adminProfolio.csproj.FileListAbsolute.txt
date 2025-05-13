@@ -52,3 +52,4 @@ C:\Users\DESARROLLADOR_J.ADVA\source\repos\adminProfolio\adminProfolio\bin\Debug
 C:\Users\DESARROLLADOR_J.ADVA\source\repos\adminProfolio\adminProfolio\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\DESARROLLADOR_J.ADVA\source\repos\adminProfolio\adminProfolio\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\DESARROLLADOR_J.ADVA\source\repos\adminProfolio\adminProfolio\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\DESARROLLADOR_J.ADVA\source\repos\adminProfolio\adminProfolio\obj\Debug\net8.0\adminProfolio.sourcelink.json
