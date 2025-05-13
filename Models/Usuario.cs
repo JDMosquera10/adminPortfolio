@@ -21,7 +21,7 @@ namespace adminProfolio.Models
         public string refresh_token { get; set; } = null!;
 
         [BsonElement("phone_number")]
-        public double phone_number { get; set; } = 0;
+        public double? phone_number { get; set; } = null;
 
         [BsonElement("fullname")]
         public string fullname { get; set; } = null!;

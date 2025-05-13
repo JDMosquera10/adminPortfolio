@@ -75,7 +75,7 @@ namespace adminProfolio.Services
                 return null;
             }
 
-            if (!string.IsNullOrEmpty(dto.email) && dto.email != usuario.email)
+            if (!string.IsNullOrWhiteSpace(dto.email) && dto.email != usuario.email)
             {
                 var emailExistente = await _usuarios.Find(u => u.email == dto.email).FirstOrDefaultAsync();
                 if (emailExistente != null)
@@ -93,7 +93,7 @@ namespace adminProfolio.Services
 
             if (!string.IsNullOrEmpty(dto.fullname)) usuario.fullname = dto.fullname;
             if (!string.IsNullOrEmpty(dto.email)) usuario.email = dto.email;
-            if (!double.IsNaN(dto.phone_number)) usuario.phone_number = dto.phone_number;
+            if (dto.phone_number.HasValue) usuario.phone_number = dto.phone_number.Value;
 
             await _usuarios.ReplaceOneAsync(u => u.Id == id, usuario);
 
